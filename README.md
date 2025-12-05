@@ -2,7 +2,7 @@
 
 This repository contains a Streamlit application that provides stock insights and analysis. It uses the yfinance API to fetch historical and real-time price data, as well as news articles related to a particular stock. The application also utilizes the Ollama API to generate AI-generated insights based on the historical data.
 
-## 🚀 Key Features
+## Key Features
 
 * **Dynamic UI with Streamlit:** Built using the **Streamlit** Python framework, providing a responsive and interactive user interface with multi-tab navigation. Custom CSS is used to enhance the appearance and spacing of the navigation tabs.
 * **Time-Series Visualization:** Generates and displays a historical **price chart** (OHLC data) for a user-specified stock ticker and time period.
@@ -11,8 +11,11 @@ This repository contains a Streamlit application that provides stock insights an
 * **Interactive Q&A:** Implements a **chat interface** (`st.chat_input`) allowing users to ask **follow-up questions** to the LLM, grounding the responses in the initial analysis and stock context using session state (`st.session_state`) for conversation history.
 
 ---
+## Example of what it looks like
 
-## 💻 Technical Stack and Architecture
+---
+
+## Technical Stack and Architecture
 
 This project leverages a modern Python data science stack with a focus on local LLM deployment.
 
