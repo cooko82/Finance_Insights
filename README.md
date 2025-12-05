@@ -1,56 +1,39 @@
+# 📈 Stock Insights Dashboard: Technical Overview
+
 This repository contains a Streamlit application that provides stock insights and analysis. It uses the yfinance API to fetch historical and real-time price data, as well as news articles related to a particular stock. The application also utilizes the Ollama API to generate AI-generated insights based on the historical data.
 
+## 🚀 Key Features
 
+* **Dynamic UI with Streamlit:** Built using the **Streamlit** Python framework, providing a responsive and interactive user interface with multi-tab navigation. Custom CSS is used to enhance the appearance and spacing of the navigation tabs.
+* **Time-Series Visualization:** Generates and displays a historical **price chart** (OHLC data) for a user-specified stock ticker and time period.
+* **Real-Time Metrics:** Fetches and displays the **live price** and critical financial metadata (e.g., industry, sector, employee count, leadership).
+* **AI-Powered Contextual Analysis:** Integrates a local **Large Language Model (LLM)** via the Ollama API to generate in-depth, context-aware financial insights based on the fetched historical data.
+* **Interactive Q&A:** Implements a **chat interface** (`st.chat_input`) allowing users to ask **follow-up questions** to the LLM, grounding the responses in the initial analysis and stock context using session state (`st.session_state`) for conversation history.
 
-I. Application Architecture and Stack
-Platform: Streamlit (Python web framework) for rapid development of the interactive user interface (UI) and server-side logic.
+---
 
-Execution Model: Client-server architecture where the Python backend (server) runs the Streamlit script, and the frontend (client) communicates with it via WebSockets for persistent, bi-directional updates. Application state is managed using st.session_state.
+## 💻 Technical Stack and Architecture
 
-Data Layer: Relies on third-party financial APIs for data acquisition.
+This project leverages a modern Python data science stack with a focus on local LLM deployment.
 
-AI/NLP Layer: Integrates a local, self-hosted Language Model (LLM) via the Ollama API for context-aware analysis.
+### 1. Core Framework
+* **Streamlit:** Serves as the web application layer, handling application flow, state management, and all front-end rendering.
 
-II. Data Acquisition and Processing
-Historical Market Data:
+### 2. Data Acquisition (APIs)
+* **`yfinance`:** Used as the primary financial data connector.
+    * **Historical Data:** Fetches pandas DataFrames containing Open, High, Low, Close, and Volume data.
+    * **Metadata & News:** Retrieves essential corporate information and news headlines.
 
-Source: yfinance library (unofficial client for Yahoo Finance).
+### 3. AI/NLP Engine
+* **Ollama API (Local Host):** Manages and runs the local language model (e.g., **Phi-3**).
+    * **Communication:** Utilizes the official **`ollama-python`** client library for robust interaction.
+    * **Prompt Engineering:** The LLM prompt is dynamically constructed, including serialized DataFrame data (`DataFrame.to_string()`) and the user's specific question to ensure contextual accuracy.
 
-Data Retrieval: Fetches historical OHLC (Open, High, Low, Close) price data, adjusted close prices, and volume for a specified stock ticker.
+### 4. Visualization & Utilities
+* **Matplotlib:** Used for generating and rendering the historical price chart. The resulting image is converted to a **Base64-encoded PNG string** via `io.BytesIO` before being displayed by Streamlit's `st.image()`.
+* **Pandas:** Essential for data manipulation, handling time-series data, and creating clean tabular outputs (e.g., for company officer lists).
 
-Input Parameters: User-defined stock ticker symbol (e.g., AAPL, GOOGL) and a time period (e.g., 1y, 3mo, or custom date range).
-
-Real-Time Data:
-
-Retrieves the current price, daily change, and market status. Note: Streamlit updates typically require a manual rerun or time-based refresh mechanism (e.g., st.empty() or custom polling logic) to simulate "real-time" updates.
-
-News Articles:
-
-Source: yfinance metadata functionalities.
-
-Data Structure: Fetches a list of recent, relevant news articles, typically including fields like title, publisher, and link.
-
-III. User Interface (UI) and Visualization
-Input Widgets: Utilizes Streamlit widgets such as st.text_input for the stock symbol and st.selectbox or st.date_input for the time period selection.
-
-Primary Visualization: Displays the historical price data as a time-series chart (e.g., a Line Chart or Candlestick chart) using libraries such as Plotly Express or Altair via Streamlit's native charting functions (st.line_chart, st.plotly_chart).
-
-Information Display: Uses Streamlit containers (st.container), columns (st.columns), and layout functions to structure the data (e.g., displaying current price metrics using st.metric).
-
-News Display: Presents news articles in a structured format, possibly using st.dataframe or custom Markdown formatting (st.markdown) for readability.
-
-IV. AI-Powered Analysis and Insights
-LLM Integration: Communicates with the Ollama API endpoint (typically running locally on http://localhost:11434) via HTTP POST requests to generate text.
-
-Contextual Prompting: The prompt sent to the LLM is dynamically constructed. It includes:
-
-The user's query (the question about the stock).
-
-Grounding Data: A serialized segment of the historical price data (e.g., recent closing prices, volume, and derived technical indicators) to provide context for the LLM's response.
-
-System Instructions: Directives defining the LLM's persona (e.g., "Act as a financial analyst") and the required output format.
-
-Output: The LLM's response provides AI-generated insights and analysis based on the provided historical data context.
+---
 
 To run the application, you need to create a virtual environment and install the required dependencies. You can do this by running the following commands:
 
@@ -67,5 +50,6 @@ ollama pull phi3
 You can then start the Ollama server by running the following command:
 
 ```bash
+brew services start ollama
 ollama run phi3
 ```
