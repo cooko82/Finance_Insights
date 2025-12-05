@@ -16,17 +16,22 @@ This repository contains a Streamlit application that provides stock insights an
 ### Generated chart after inputing the stock
 <img width="1281" height="692" alt="image" src="https://github.com/user-attachments/assets/881215ea-a436-4e7a-971f-f678752d0b9f" />
 <img width="1284" height="673" alt="image" src="https://github.com/user-attachments/assets/bf3d8bb2-9228-4ba0-ba8f-48593bc1680f" />
+<img width="1296" height="630" alt="image" src="https://github.com/user-attachments/assets/08226929-ebf1-4a1b-bd2e-f8b5f1dffe4b" />
+
 
 
 ### Generated company info
 <img width="1334" height="722" alt="image" src="https://github.com/user-attachments/assets/6af50bc9-89e2-4af8-bc94-ae3e8cdb8386" />
+<img width="1469" height="667" alt="image" src="https://github.com/user-attachments/assets/2127cea2-70f4-4f1d-9d58-b93e3870fdc9" />
+
 
 ### Ai insights
 <img width="1466" height="706" alt="image" src="https://github.com/user-attachments/assets/8ea8475d-61a5-4f3e-838a-fd3e52e81070" />
+<img width="1452" height="670" alt="image" src="https://github.com/user-attachments/assets/1e3e2340-af6f-424d-a5f1-8f5911d43376" />
+
 ask follow-up questions to LLM
 <img width="1412" height="707" alt="image" src="https://github.com/user-attachments/assets/d641a59b-a406-4cd6-ab43-da7f070cd3ef" />
-
-
+<img width="1442" height="652" alt="image" src="https://github.com/user-attachments/assets/7ee78523-080d-4c88-b296-76c67d3a5e5a" />
 
 ---
 
