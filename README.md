@@ -13,6 +13,19 @@ This repository contains a Streamlit application that provides stock insights an
 ---
 ## Example of what it looks like
 
+### Generated chart after inputing the stock
+<img width="1281" height="692" alt="image" src="https://github.com/user-attachments/assets/881215ea-a436-4e7a-971f-f678752d0b9f" />
+
+### Generated company info
+<img width="1334" height="722" alt="image" src="https://github.com/user-attachments/assets/6af50bc9-89e2-4af8-bc94-ae3e8cdb8386" />
+
+### Ai insights
+<img width="1466" height="706" alt="image" src="https://github.com/user-attachments/assets/8ea8475d-61a5-4f3e-838a-fd3e52e81070" />
+ask follow-up questions to LLM
+<img width="1412" height="707" alt="image" src="https://github.com/user-attachments/assets/d641a59b-a406-4cd6-ab43-da7f070cd3ef" />
+
+
+
 ---
 
 ## Technical Stack and Architecture
