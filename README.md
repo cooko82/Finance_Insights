@@ -56,3 +56,8 @@ You can then start the Ollama server by running the following command:
 brew services start ollama
 ollama run phi3
 ```
+
+clone repo then run
+```bash
+streamlit run app.py
+```
