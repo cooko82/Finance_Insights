@@ -15,6 +15,8 @@ This repository contains a Streamlit application that provides stock insights an
 
 ### Generated chart after inputing the stock
 <img width="1281" height="692" alt="image" src="https://github.com/user-attachments/assets/881215ea-a436-4e7a-971f-f678752d0b9f" />
+<img width="1284" height="673" alt="image" src="https://github.com/user-attachments/assets/bf3d8bb2-9228-4ba0-ba8f-48593bc1680f" />
+
 
 ### Generated company info
 <img width="1334" height="722" alt="image" src="https://github.com/user-attachments/assets/6af50bc9-89e2-4af8-bc94-ae3e8cdb8386" />
