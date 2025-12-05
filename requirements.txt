@@ -1,0 +1,7 @@
+yfinance
+logging
+pandas
+matplotlib
+requests
+streamlit
+ollama

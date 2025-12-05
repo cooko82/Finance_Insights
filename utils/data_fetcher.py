@@ -4,7 +4,7 @@ import datetime as dt
 
 import sys
 import yfinance as yf
-import panadas as pd
+import pandas as pd
 
 #print logging in terminal
 logging.basicConfig(
