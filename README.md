@@ -9,6 +9,7 @@ This repository contains a Streamlit application that provides stock insights an
 * **Real-Time Metrics:** Fetches and displays the **live price** and critical financial metadata (e.g., industry, sector, employee count, leadership).
 * **AI-Powered Contextual Analysis:** Integrates a local **Large Language Model (LLM)** via the Ollama API to generate in-depth, context-aware financial insights based on the fetched historical data.
 * **Interactive Q&A:** Implements a **chat interface** (`st.chat_input`) allowing users to ask **follow-up questions** to the LLM, grounding the responses in the initial analysis and stock context using session state (`st.session_state`) for conversation history.
+* * **Docker**: Implemented Docker-based containerisation to standardise runtime environments, reduce dependency conflicts, and support scalable, reproducible deployments.
 
 ---
 ## Example of what it looks like
